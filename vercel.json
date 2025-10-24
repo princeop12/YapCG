@@ -2,14 +2,23 @@
   "version": 2,
   "builds": [
     {
-      "src": "app.py",
+      "src": "api/**/*.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/callback",
-      "dest": "app.py"
+      "dest": "api/callback.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "api/callback.py"
     }
-  ]
+  ],
+  "functions": {
+    "api/callback.py": {
+      "maxDuration": 10
+    }
+  }
 }

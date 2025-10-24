@@ -3,3 +3,10 @@
 cnQ0MUd1U3ROcWxyNDJ3c3VHR1c6MTpjaQ
 
 Hw0A4H4RVUp31sJ0Azjn4PJG8CQq8yqociNrd09mSd27IBA8c_
+
+# X Config (replace with yours)
+X_CLIENT_ID = os.getenv('X_CLIENT_ID', 'cnQ0MUd1U3ROcWxyNDJ3c3VHR1c6MTpjaQ')  # Use env vars in Vercel
+X_SECRET = os.getenv('X_SECRET', 'Hw0A4H4RVUp31sJ0Azjn4PJG8CQq8yqociNrd09mSd27IBA8c_')  # Needed for token exchange
+DB_FILE = 'engagements_bot.db'  # If sharing DB with bot; for Vercel, use SQLite or switch to PostgreSQL
+BOT_TOKEN = os.getenv('BOT_TOKEN', '8174658087:AAGcGiEnMiJPkjFXTxMAIrVTXhFLjo9RJdo')  # To notify via Telegram
+TELEGRAM_BOT_URL = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
